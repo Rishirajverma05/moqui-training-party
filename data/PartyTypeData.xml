@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-facade-xml type="seed">
+    <!-- PartyType Enum -->
+    <moqui.basic.EnumerationType enumTypeId="PartyType" description="Party Type"/>
+    <moqui.basic.Enumeration enumTypeId="PartyType" enumId="PERSON" description="Individual Person"/>
+    <moqui.basic.Enumeration enumTypeId="PartyType" enumId="PARTY_GROUP" description="Organization"/>
+
+</entity-facade-xml>
