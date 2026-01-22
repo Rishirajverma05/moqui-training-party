@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entity-facade-xml type="seed-initial">
-    <moqui.security.ArtifactGroup artifactGroupId="PARTY_APP"
-                                  description="PARTY APP (via root screen)"/>
-    <moqui.security.ArtifactGroupMember artifactGroupId="PARTY_APP"
+    <moqui.security.ArtifactGroup artifactGroupId="PARTY"
+                                  description="PARTY APP"/>
+    <moqui.security.ArtifactGroupMember artifactGroupId="PARTY"
                                         artifactName="component://party/screen/Party.xml"
                                         artifactTypeEnumId="AT_XML_SCREEN" inheritAuthz="Y"/>
     <moqui.security.ArtifactAuthz artifactAuthzId="PARTY_ALL"
-                                  userGroupId="ALL_USERS" artifactGroupId="PARTY_APP"
+                                  userGroupId="ALL_USERS" artifactGroupId="PARTY"
                                   authzTypeEnumId="AUTHZT_ALWAYS" authzActionEnumId="AUTHZA_ALL"/>
 </entity-facade-xml>
