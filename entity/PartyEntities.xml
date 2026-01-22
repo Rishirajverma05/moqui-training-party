@@ -10,4 +10,15 @@
             <key-map field-name="partyTypeEnumId" related="enumId"/>
         </relationship>
     </entity>
+    <!-- Person Entity -->
+    <entity entity-name="Person" package="party">
+        <field name="partyId" type="id" is-pk="true"/>
+        <field name="firstName" type="text-short" not-null="true"/>
+        <field name="lastName" type="text-short" not-null="true"/>
+        <field name="dateOfBirth" type="date"/>
+
+        <relationship type="one"  related="party.Party">
+            <key-map field-name="partyId"/>
+        </relationship>
+    </entity>
 </entities>
