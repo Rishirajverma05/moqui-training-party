@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="demo">
+    <!-- Sample Data For Party Component -->
+    <party.Party partyId="P1" partyTypeEnumId="PERSON" createdDate="2024-01-01T10:00:00"/>
+    <party.Party partyId="P2" partyTypeEnumId="PARTY_GROUP" createdDate="2024-01-01T10:05:00"/>
+
+    <party.Person partyId="P1" firstName="Light" lastName="Yagami" dateOfBirth="1999-06-15"/>
+
+    <party.PartyGroup partyId="P2" groupName="Hotwax Systems" description="Enterprise Commerce Platform"/>
+
+    <party.ContactMech contactMechId="CM1" contactMechTypeId="EMAIL" infoString="light.yagami@kira.com" createdDate="2024-01-01T11:00:00"/>
+    <party.ContactMech contactMechId="CM2" contactMechTypeId="TELECOM_NUMBER" infoString="+91-9876543210" createdDate="2024-01-01T11:05:00"/>
+
+    <party.PartyContactMech partyId="P1" contactMechId="CM1" fromDate="2024-01-01T11:10:00"/>
+    <party.PartyContactMech partyId="P1" contactMechId="CM2" fromDate="2024-01-01T11:15:00"/>
+
+</entity-facade-xml>
