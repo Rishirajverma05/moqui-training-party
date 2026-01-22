@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd">
-    <actions>
-        <entity-find entity-name="party.Party" list="partyList">
-            <search-form-inputs/>
-        </entity-find>
-    </actions>
-    <widgets>
-        <form-list name="ListParty" list="partyList" header-dialog="true" skip-form="true">
-            <auto-fields-entity entity-name="party.Party" field-type="find-display"/>
-        </form-list>
-    </widgets>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd">
+        <transition name="createParty">
+            <service-call name="create#Party"/>
+            <default-response url="."/>
+        </transition>
+        <actions>
+            <entity-find entity-name="party.Party" list="partyList">
+                <search-form-inputs/>
+            </entity-find>
+        </actions>
+        <widgets>
+            <container-dialog id="CreatePartyDialog" button-text="Create Party" title="Entry Party Details" >
+                <form-single name="CreatePartyForm" transition="createParty">
+                    <auto-fields-entity entity-name="party.Party" field-type="edit" include="nonpk"/>
+                    <field name="submitButton"><default-field title="Create"><submit/></default-field></field>
+                </form-single>
+            </container-dialog>
+
+            <form-list name="ListParty" list="partyList" header-dialog="true" skip-form="true">
+                <auto-fields-entity entity-name="party.Party" field-type="find-display"/>
+            </form-list>
+        </widgets>
 </screen>
