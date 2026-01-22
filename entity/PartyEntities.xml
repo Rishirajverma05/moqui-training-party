@@ -41,5 +41,18 @@
             <key-map field-name="contactMechTypeId" related="enumId"/>
         </relationship>
     </entity>
+    <!-- PartyContactMech Entity -->
+    <entity entity-name="PartyContactMech" package="party">
+        <field name="partyId" type="id" is-pk="true"/>
+        <field name="contactMechId" type="id" is-pk="true"/>
+        <field name="fromDate" type="date-time" is-pk="true"/>
+        <field name="thruDate" type="date-time"/>
 
+        <relationship type="one" related="party.Party">
+            <key-map field-name="partyId"/>
+        </relationship>
+        <relationship type="one" related="party.ContactMech">
+            <key-map field-name="contactMechId"/>
+        </relationship>
+    </entity>
 </entities>
