@@ -21,4 +21,14 @@
             <key-map field-name="partyId"/>
         </relationship>
     </entity>
+    <!-- PartyGroup Entity -->
+    <entity entity-name="PartyGroup" package="party">
+        <field name="partyId" type="id" is-pk="true"/>
+        <field name="groupName" type="text-short" not-null="true"/>
+        <field name="description" type="text-long"/>
+
+        <relationship type="one" related="party.Party">
+            <key-map field-name="partyId"/>
+        </relationship>
+    </entity>
 </entities>
