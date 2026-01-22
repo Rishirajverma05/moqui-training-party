@@ -5,7 +5,7 @@
 
         <resource name="person" require-authentication="anonymous-all">
             <method type="post">
-                <service name="party.PersonServices.create#Person"/>
+                <service name="party.PartyPersonServices.create#Person"/>
             </method>
         </resource>
 
