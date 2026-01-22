@@ -30,5 +30,16 @@
         <relationship type="one" related="party.Party">
             <key-map field-name="partyId"/>
         </relationship>
+    </entity><!-- ContactMech Entity -->
+    <entity entity-name="ContactMech" package="party">
+        <field name="contactMechId" type="id" is-pk="true"/>
+        <field name="contactMechTypeId" type="id" not-null="true"/>
+        <field name="infoString" type="text-medium" not-null="true"/>
+        <field name="createdDate" type="date-time"/>
+
+        <relationship type="one" title="ContactMechType" related="moqui.basic.Enumeration">
+            <key-map field-name="contactMechTypeId" related="enumId"/>
+        </relationship>
     </entity>
+
 </entities>

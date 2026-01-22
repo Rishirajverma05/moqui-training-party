@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="seed">
+    <!-- ContactMechType Enum -->
+    <moqui.basic.EnumerationType enumTypeId="contactMechType" description="Ways To Contact"/>
+    <moqui.basic.Enumuration enumTypeId="contactMechType" enumId="EMAIL" description="Email Address"/>
+    <moqui.basic.Enumuration enumTypeId="contactMechType" enumId="TELECOM_NUMBER" description="Telephone number"/>
+    <moqui.basic.Enumuration enumTypeId="contactMechType" enumId="POSTAL_ADDRESS" description="Postal Address"/>
+
+</entity-facade-xml>
